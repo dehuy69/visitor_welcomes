@@ -18,7 +18,6 @@ def say(visitor):
         os.system("mpg321 girl.mp3")
     os.system("mpg321 welcomes.mp3")
 
-
 df = pd.read_csv('visitors.csv')
 csv_edit_time = os.path.getmtime('visitors.csv')
 camera = PiCamera()
