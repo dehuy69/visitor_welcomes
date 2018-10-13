@@ -41,8 +41,8 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
                 if obj.data != privious_data:
                     print('Type : ', obj.type)
                     print('Data : ', obj.data, '\n')
-                    qr_id = obj.data
-                    visitor = df.query("qr_id = @qr_id")
+                    qr_id = obj.data.decode('utf8')
+                    visitor = df.query("qr_id == @qr_id")
 
                     say('hello')
                     say(visitor.name.get_values()[0], lang='vi')
