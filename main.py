@@ -6,6 +6,10 @@ import time
 import os
 import pandas as pd
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 def say(visitor):
     ss2 = gTTS(text=visitor.name.get_values()[0], lang='vi')
     with open('name.mp3', 'wb') as f:
